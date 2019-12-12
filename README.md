@@ -38,6 +38,8 @@ You can choose between the following models:
 * CNN
 * CRNN
 
+## Running the code
+
 
 ## Cite
 

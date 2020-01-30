@@ -26,7 +26,7 @@ python train.py
 ```
 
 ## Data
-![](https://img.shields.io/badge/downloads-Earthquake-yellow)(http://www.kyoshin.bosai.go.jp/)
+![](https://img.shields.io/badge/downloads-Earthquake-yellow.svg)(http://www.kyoshin.bosai.go.jp/)
 
 ![](https://img.shields.io/badge/downloads-Non--Earthquake-yellow)
 In order to use your own data, you have to provide 

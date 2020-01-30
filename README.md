@@ -2,7 +2,7 @@
 
 This is a Python3 implementation of Convolutional Recurrent Neural Networks for the task of binary classification of seismic detection, as described in our paper:
 
-![](https://img.shields.io/badge/license-GPL-3.0-000000.svg)
+![](https://img.shields.io/badge/license-MIT-blue)
 
 ## Installation
 

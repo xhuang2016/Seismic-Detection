@@ -31,7 +31,7 @@ $ pip install -r requirements.txt
 
 ## Data
 The dataset contains two classes:
-1. Earthquake: Download from National Research Institute for Earth Science and Disaster Resilience (NIED).
+1. Earthquake: Downloaded from National Research Institute for Earth Science and Disaster Resilience (NIED).
 [![](https://img.shields.io/badge/downloads-Earthquake-yellow)](http://www.kyoshin.bosai.go.jp/)
 
 2. Non-Earthquake: Recorded by our low-cost sensors.

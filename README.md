@@ -35,7 +35,7 @@ The dataset contains two classes of three-component time-series acceleration wav
 1. Earthquake: Downloaded from National Research Institute for Earth Science and Disaster Resilience (NIED).
     [![](https://img.shields.io/badge/downloads-Earthquake-yellow)](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html)
 
-> Note: We use a total of 2299 K-NET records of Japan earthquakes from Jan. 1st 1996 to May 31th 2019, each of whose x-axis component peak ground acceleration (PGA) is greater than 0.1 gravity (g). To reproduce the results, please sign in NIED, then 
+> Note: We use a total of 2299 K-NET records of Japan earthquakes from Jan. 1st 1996 to May 31th 2019, each of whose x-axis component peak ground acceleration (PGA) is greater than 0.1 gravity (g). To reproduce the results, please visit NIED (click above badge), sign in, and select Network -- K-NET; Peak acceleration -- from 100 to 10000. Due to the limitation of the website, please select Recording start time annually.
 
 2. Non-Earthquake: Background noise of the low-cost sensors measured in several environments and various human activities recorded by our low-cost sensors.
     ![](https://img.shields.io/badge/downloads-Non--Earthquake-yellow)

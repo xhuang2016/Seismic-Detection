@@ -32,23 +32,16 @@ python setup.py install
 $ pip install -r requirements.txt
 ```
 
-## Run the demo
-
-```bash
-cd gcn
-python train.py
-```
 
 ## Data
+The dataset contains two classes:
+1. Earthquake: Download from National Research Institute for Earth Science and Disaster Resilience (NIED).
 [![](https://img.shields.io/badge/downloads-Earthquake-yellow)](http://www.kyoshin.bosai.go.jp/)
 
+2. Non-Earthquake: Recorded by our low-cost sensors.
 ![](https://img.shields.io/badge/downloads-Non--Earthquake-yellow)
 
-In order to use your own data, you have to provide 
-
-
-
-(or by editing `train.py`)
+You can also use your own data.
 
 ## Models
 

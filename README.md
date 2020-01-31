@@ -4,11 +4,7 @@ This is a Python3 implementation of Convolutional Recurrent Neural Networks for 
 
 ![](https://img.shields.io/badge/license-GPL--3.0-blue)
 [![](https://img.shields.io/badge/Python-3.7.2-green)](https://www.python.org/downloads/release/python-372/)
-## Installation
 
-```bash
-python setup.py install
-```
 
 ## Requirements
 <!---*tensorflow (1.14)--> 

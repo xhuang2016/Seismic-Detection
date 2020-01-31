@@ -22,7 +22,7 @@ python setup.py install
 
 [![](https://img.shields.io/badge/tensorflow-1.14-green)](https://www.tensorflow.org/)
 [![](https://img.shields.io/badge/Keras-1.14-green)](https://keras.io/)
-[![](https://img.shields.io/badge/scikit--learn-1.14-green)](https://scikit-learn.org/stable/index.html)
+[![](https://img.shields.io/badge/scikit--learn-0.21.2-green)](https://scikit-learn.org/stable/index.html)
 [![](https://img.shields.io/badge/pandas-0.24.1-green)](https://pandas.pydata.org/pandas-docs/stable/index.html)
 [![](https://img.shields.io/badge/numpy-1.16.1-green)](https://numpy.org/devdocs/index.html)
 [![](https://img.shields.io/badge/obspy-1.1.1-green)](https://docs.obspy.org/)

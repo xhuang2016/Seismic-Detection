@@ -28,6 +28,10 @@ python setup.py install
 [![](https://img.shields.io/badge/obspy-1.1.1-green)](https://docs.obspy.org/)
 [![](https://img.shields.io/badge/matplotlib-3.0.3-green)](https://matplotlib.org/3.0.3/index.html)
 
+```bash
+$ pip install -r requirements.txt
+```
+
 ## Run the demo
 
 ```bash

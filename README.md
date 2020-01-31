@@ -33,14 +33,12 @@ $ pip install -r requirements.txt
 ## Data
 The dataset contains two classes of three-component time-series acceleration waveforms:
 1. Earthquake: Downloaded from National Research Institute for Earth Science and Disaster Resilience (NIED).
+    [![](https://img.shields.io/badge/downloads-Earthquake-yellow)](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html)
 
-[![](https://img.shields.io/badge/downloads-Earthquake-yellow)](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html)
-
-> Note: We use a total of 2299 K-NET records of Japan earthquakes, each of whose $x$-axis component peak ground acceleration (PGA) is greater than 0.1 gravity (g).
+> Note: We use a total of 2299 K-NET records of Japan earthquakes, each of whose x-axis component peak ground acceleration (PGA) is greater than 0.1 gravity (g).
 
 2. Non-Earthquake: Background noise of the low-cost sensors measured in several environments and various human activities recorded by our low-cost sensors.
-
-![](https://img.shields.io/badge/downloads-Non--Earthquake-yellow)
+    ![](https://img.shields.io/badge/downloads-Non--Earthquake-yellow)
 
 You can also use your own data, but the data should contain three-component time-series accelerations.
 

@@ -11,7 +11,7 @@ python setup.py install
 ```
 
 ## Requirements
-//* tensorflow (1.14)
+<!--- -->* tensorflow (1.14)
 [![](https://img.shields.io/badge/tensorflow-1.14-green)](https://www.tensorflow.org/)
 
 ; * Keras (2.2.4)

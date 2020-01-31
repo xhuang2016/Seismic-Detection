@@ -1,9 +1,10 @@
+![](https://img.shields.io/badge/license-GPL--3.0-blue)
+[![](https://img.shields.io/badge/Python-3.7.2-green)](https://www.python.org/downloads/release/python-372/)
+
 # Seismic Detection
 
 This is a Python3 implementation of Convolutional Recurrent Neural Networks for the task of binary classification of seismic detection, as described in our paper:
 
-![](https://img.shields.io/badge/license-GPL--3.0-blue)
-[![](https://img.shields.io/badge/Python-3.7.2-green)](https://www.python.org/downloads/release/python-372/)
 
 
 ## Requirements

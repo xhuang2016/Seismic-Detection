@@ -29,6 +29,8 @@ This is a Python3 implementation of Convolutional Recurrent Neural Networks for 
 $ pip install -r requirements.txt
 ```
 
+In addition, CUDA 9.0 and cuDNN 7 have been used.
+
 
 ## Data
 The dataset contains two classes of three-component time-series acceleration waveforms:

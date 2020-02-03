@@ -3,8 +3,13 @@
 
 # Seismic Detection
 
-This is a Python3 implementation of Convolutional Recurrent Neural Networks for the task of binary classification of seismic detection, as described in our paper:
+This is a Python3 implementation of Convolutional Recurrent Neural Networks for the task of binary classification of seismic detection, as described in our paper.
 
+## Overview
+
+Here we provide the implementation of ANN and CRNN models used in our paper. The repository is organised as follows:
+* ```processing/```contains the codes for processing the data.
+* ```models/``` contains the implementation of the ANN and CRNN models.
 
 
 ## Requirements

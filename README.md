@@ -56,13 +56,8 @@ You can choose between the following models:
 <!---* CNN--> 
 * CRNN
 
-## Running the code
+<!---## Running the code--> 
 
+<!---## Cite--> 
 
-## Cite
-
-Please cite our paper if you use this code in your own work:
-
-```
-
-```
+<!---Please cite our paper if you use this code in your own work:--> 

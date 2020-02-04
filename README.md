@@ -13,7 +13,7 @@ Here we provide the implementation of Artificial Neural Network (ANN) and Convol
 
 
 ## Requirements
-<!---*tensorflow (1.14)--> 
+<!---*tensorflow (gpu-1.14)--> 
 <!---* Keras (2.2.4)--> 
 <!---* scikit-learn (0.21.2)--> 
 <!---* pandas (0.24.1)--> 
@@ -22,7 +22,7 @@ Here we provide the implementation of Artificial Neural Network (ANN) and Convol
 <!---* matplotlib (3.0.3)--> 
 
 
-[![](https://img.shields.io/badge/tensorflow-1.14-green)](https://www.tensorflow.org/)
+[![](https://img.shields.io/badge/tensorflow-gpu--1.14-green)](https://www.tensorflow.org/)
 [![](https://img.shields.io/badge/Keras-2.2.4-green)](https://keras.io/)
 [![](https://img.shields.io/badge/scikit--learn-0.21.2-green)](https://scikit-learn.org/stable/index.html)
 [![](https://img.shields.io/badge/pandas-0.24.1-green)](https://pandas.pydata.org/pandas-docs/stable/index.html)

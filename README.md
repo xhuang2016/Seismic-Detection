@@ -66,7 +66,7 @@ You can choose between the following models:
 2. Run ```Processing/processing.py``` to process the raw data.
 3. Run ```Models/ANN.py``` and ```Models/CRNN.py``` to train and test two models.
 4. ```Models/ANN_kfold.py``` and ```Models/CRNN_kfold.py``` can be used for k-fold cross validation.
-
+> Note: For differet test cases, please change the setting as described in each code file.
 
 
 

@@ -60,7 +60,11 @@ You can choose between the following models:
 <!---* CNN--> 
 * CRNN: See more details in our paper.
 
-<!---## Running the code--> 
+## Running the code
+1. Download the data as described above.
+2. Run ```Processing/processing.py``` to process the raw data.
+3. Run ```Models/ANN.py``` and ```Models/CRNN.py``` to train and test two models.
+4. ```Models/ANN_kfold.py``` and ```Models/CRNN_kfold.py``` can be used for k-fold cross validation.
 
 <!---## Cite--> 
 

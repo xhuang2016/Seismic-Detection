@@ -67,6 +67,7 @@ You can choose between the following models:
 4. ```Models/ANN_kfold.py``` and ```Models/CRNN_kfold.py``` can be used for k-fold cross validation.
 > Note: 
 >> To reproduce our results, please download the same set of data as we used in the paper.
+
 >> For different test cases, please change the setting as described in each code file.
 
 

@@ -1,9 +1,9 @@
 ![](https://img.shields.io/badge/license-GPL--3.0-blue)
 [![](https://img.shields.io/badge/Python-3.7.2-green)](https://www.python.org/downloads/release/python-372/)
 
-# Seismic Detection
+# CrowdQuake: A Networked System of Low-Cost Sensors for Earthquake Detection via Deep Learning
 
-This is a Python3 implementation of Convolutional Recurrent Neural Networks for the task of binary classification of seismic detection, as described in our paper.
+<!---This is a Python3 implementation of Convolutional Recurrent Neural Networks for the task of binary classification of seismic detection, as described in our paper.--> 
 
 ## Overview
 

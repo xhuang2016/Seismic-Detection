@@ -8,8 +8,8 @@ This is a Python3 implementation of Convolutional Recurrent Neural Networks for 
 ## Overview
 
 Here we provide the implementation of ANN and CRNN models used in our paper. The repository is organised as follows:
-* ```processing/```contains the codes for processing the data.
-* ```models/``` contains the implementation of the ANN and CRNN models.
+* ```Processing/```contains the codes for processing the data.
+* ```Models/``` contains the implementation of the ANN and CRNN models.
 
 
 ## Requirements

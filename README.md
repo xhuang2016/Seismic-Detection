@@ -69,8 +69,6 @@ You can choose between the following models:
 > 1. To reproduce our results, please download the same set of data as we used in the paper.  
 > 2. For different test cases, please change the setting as described in each code file.
 
-
-
 <!---## Cite--> 
 
 <!---Please cite our paper if you use this code in your own work:--> 

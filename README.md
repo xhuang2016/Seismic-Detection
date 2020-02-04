@@ -56,9 +56,9 @@ You can also use your own data, but the data should contain three-component time
 ## Models
 
 You can choose between the following models: 
-* ANN
+* ANN: A multi-layer perceptron with three input features (IQR,ZC,and CAV) and a hidden layer of 5 neurons. See more details in our paper or [MyShake](https://advances.sciencemag.org/content/2/2/e1501055) paper.
 <!---* CNN--> 
-* CRNN
+* CRNN: See more details in our paper.
 
 <!---## Running the code--> 
 

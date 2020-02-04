@@ -34,7 +34,7 @@ Here we provide the implementation of Artificial Neural Network (ANN) and Convol
 $ pip install -r requirements.txt
 ```
 
-In addition, CUDA 9.0 and cuDNN 7 have been used.
+In addition, CUDA 10.0 and cuDNN 7.4 have been used.
 
 
 ## Data

@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/license-GPL--3.0-blue)
+[![](https://img.shields.io/badge/license-GPL--3.0-blue)](https://www.gnu.org/licenses/)
 [![](https://img.shields.io/badge/Python-3.7.2-green)](https://www.python.org/downloads/release/python-372/)
 
 # CrowdQuake: A Networked System of Low-Cost Sensors for Earthquake Detection via Deep Learning

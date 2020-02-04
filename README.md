@@ -8,7 +8,7 @@
 ## Overview
 
 Here we provide the implementation of Artificial Neural Network (ANN) and Convolutional Recurrent Neural Network (CRNN) used in our paper. The repository is organised as follows:
-* ```Processing/```contains the codes for processing the data.
+* ```Processing/``` contains the codes for processing the data.
 * ```Models/``` contains the implementation of the ANN and CRNN models.
 
 

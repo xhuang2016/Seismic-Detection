@@ -41,7 +41,7 @@ In addition, CUDA 10.0 and cuDNN 7.4 have been used.
 
 ## Data
 The dataset contains two classes of three-component time-series acceleration waveforms:
-1. Earthquake: Downloaded from National Research Institute for Earth Science and Disaster Resilience (NIED).
+1. Earthquake: Download from National Research Institute for Earth Science and Disaster Resilience (NIED).
   [![](https://img.shields.io/badge/Earthquake-Download-yellow)](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html)
 
 > Note: In our paper, we use two earthquake datasets. 

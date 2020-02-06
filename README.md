@@ -8,7 +8,7 @@
 ## Overview
 
 Here we provide the implementation of Artificial Neural Network (ANN) and Convolutional Recurrent Neural Network (CRNN) used in our paper. The repository is organised as follows:
-* ```requirements.txt```: all required Python libraries to run the codes.
+* ```requirements.txt```: all required Python libraries to run the code.
 * ```Code/Processing.py```: the source code for processing the earthquake data.
 * ```Code/ANN.py```: the implementation of ANN.
 * ```Code/CRNN.py```: the implementation of CRNN.

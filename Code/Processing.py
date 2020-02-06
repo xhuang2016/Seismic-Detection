@@ -12,7 +12,7 @@ import os
 import glob
 
 ## Download Eearthquake (EQ) data from NIED (http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html)
-## Uncompress the downloaded **.tar data file to folder 'raw'
+## Uncompress the downloaded **.tar data file to the folder 'raw'
 ## Create the 'EQ' folder to save the processed data
 
 # Loction of raw EQ data

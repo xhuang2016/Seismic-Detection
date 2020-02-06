@@ -183,4 +183,4 @@ y_prob = mlp.predict_proba(ANN_test_X)
 ## Save the output prediction probability
 result = np.concatenate((ANN_test_y.reshape(-1, 1), y_prob), axis=1)
 df_result = pd.DataFrame(result, columns=['labels','prob_0','prob_1'])
-df_result.to_csv(write_path + 'ANN_%s'%SamplingRate + 'Hz_%s.csv'%Duration + 's_.csv', index=False)
+df_result.to_csv(write_path + 'ANN_%s'%SamplingRate + 'Hz_%s.csv'%Duration + 's.csv', index=False)

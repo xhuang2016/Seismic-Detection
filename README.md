@@ -16,21 +16,20 @@ Here we provide the implementation of Artificial Neural Network (ANN) and Convol
 * ```Codes/CRNN_kflod.py```: k-fold cross validation of CRNN.
 
 ## Requirements
-<!---*tensorflow (gpu-1.14)--> 
-<!---* Keras (2.2.4)--> 
-<!---* scikit-learn (0.21.2)--> 
-<!---* pandas (0.24.1)--> 
-<!---* numpy (1.16.1)--> 
-<!---* obspy (1.1.1)--> 
-<!---* matplotlib (3.0.3)--> 
+<!---numpy==1.16.1--> 
+<!---pandas=0.24.1--> 
+<!---obspy==1.1.1--> 
+<!---scikit-learn==0.21.2--> 
+<!---tensorflow-gpu==1.14--> 
+<!---Keras==2.2.4--> 
+<!---matplotlib==3.0.3--> 
 
-
+[![](https://img.shields.io/badge/numpy-1.16.1-green)](https://numpy.org/devdocs/index.html)
+[![](https://img.shields.io/badge/pandas-0.24.1-green)](https://pandas.pydata.org/pandas-docs/stable/index.html)
+[![](https://img.shields.io/badge/obspy-1.1.1-green)](https://docs.obspy.org/)
+[![](https://img.shields.io/badge/scikit--learn-0.21.2-green)](https://scikit-learn.org/stable/index.html)
 [![](https://img.shields.io/badge/tensorflow-gpu--1.14-green)](https://www.tensorflow.org/)
 [![](https://img.shields.io/badge/Keras-2.2.4-green)](https://keras.io/)
-[![](https://img.shields.io/badge/scikit--learn-0.21.2-green)](https://scikit-learn.org/stable/index.html)
-[![](https://img.shields.io/badge/pandas-0.24.1-green)](https://pandas.pydata.org/pandas-docs/stable/index.html)
-[![](https://img.shields.io/badge/numpy-1.16.1-green)](https://numpy.org/devdocs/index.html)
-[![](https://img.shields.io/badge/obspy-1.1.1-green)](https://docs.obspy.org/)
 [![](https://img.shields.io/badge/matplotlib-3.0.3-green)](https://matplotlib.org/3.0.3/index.html)
 
 ```bash

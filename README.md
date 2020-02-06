@@ -10,10 +10,10 @@
 Here we provide the implementation of Artificial Neural Network (ANN) and Convolutional Recurrent Neural Network (CRNN) used in our paper. The repository is organised as follows:
 * ```requirements.txt```: all required Python libraries to run the codes.
 * ```Codes/Processing.py```: the source code for processing the data.
-* ```Codes/ANN.py```: the implementation of the ANN model.
-* ```Codes/CRNN.py```: the implementation of the CRNN model.
-* ```Codes/ANN_kflod.py```: k-fold cross validation of the ANN.
-* ```Codes/CRNN_kflod.py```: k-fold cross validation of the CRNN.
+* ```Codes/ANN.py```: the implementation of ANN.
+* ```Codes/CRNN.py```: the implementation of CRNN.
+* ```Codes/ANN_kflod.py```: k-fold cross validation of ANN.
+* ```Codes/CRNN_kflod.py```: k-fold cross validation of CRNN.
 
 ## Requirements
 <!---*tensorflow (gpu-1.14)--> 

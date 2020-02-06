@@ -49,7 +49,7 @@ The dataset contains two classes of three-component time-series acceleration wav
 > 1. 2299 K-NET records of Japan earthquakes from Jan. 1st 1996 to May 31th 2019, each of whose x-axis component peak ground acceleration (PGA) is greater than 0.1 gravity (g). 
 > 2. 8980 K-NET records of Japan earthquakes from Jan. 1st 1996 to May 31th 2019, each of whose x-axis component PGA is greater than 0.05 g.
 
-> To download the earthquake data for reproducing our results, please visit [NIED](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html) (registration is required to download data). Select `Download` --`Data Download after Search for Data Network`. Set `Network` -- `K-NET`; `Peak acceleration` -- `from 1000 to 100000` (i.e., greater than 0.1 g) or `from 500 to 100000` (i.e., greater than 0.05 g). Due to the limitation of the website, please select Recording start time annually.
+> To download the earthquake data for reproducing our results, please visit [NIED](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html) (registration is required to download data). Select `Download` --`Data Download after Search for Data Network`, `Network` -- `K-NET`, `Peak acceleration` -- `from 1000 to 100000` (i.e., greater than 0.1 g) or `from 500 to 100000` (i.e., greater than 0.05 g). Set `Recording start time`. Click `Submit`. Select all records in `Data List`, then click `Download All Data`. Notice that, due to the constraint of the website, only headmost 1200 data will be displayed in `Data List`. Please change the range of `Recording start time`, then repeat above procedures to download all data in batches.
 
 2. Non-Earthquake: Background noise of the low-cost sensors measured in several environments and various human activities recorded by our low-cost sensors.
   [![](https://img.shields.io/badge/Non--Earthquake-Download-yellow)](https://drive.google.com/file/d/11sivVlx7z-cBwjBWPNY9D2Wmfv-FY-CM/view?usp=sharing)
@@ -70,7 +70,7 @@ You can choose between the following models:
 4. Run ```Models/ANN_kfold.py``` or ```Models/CRNN_kfold.py``` for the k-fold cross validation of each model.
 > Note:
 > 1. To reproduce our results, please download the same set of data as we used in the paper.  
-> 2. For different test cases, please change the setting as described in each code file.
+> 2. For different test cases, please change the settings as described in each code file.
 
 <!---## Cite--> 
 

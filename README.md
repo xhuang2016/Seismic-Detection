@@ -49,12 +49,12 @@ The dataset contains two classes of three-component time-series acceleration wav
 > 1. 2299 K-NET records of Japan earthquakes from Jan. 1st 1996 to May 31th 2019, each of whose x-axis component peak ground acceleration (PGA) is greater than 0.1 gravity (g). 
 > 2. 8980 K-NET records of Japan earthquakes from Jan. 1st 1996 to May 31th 2019, each of whose x-axis component PGA is greater than 0.05 g.
 
-> To download the earthquake data for reproducing our results, please visit [NIED](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html), sign in, and select Network -- K-NET; Peak acceleration -- from 100 to 10000. Due to the limitation of the website, please select Recording start time annually.
+> To download the earthquake data for reproducing our results, please visit [NIED](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html) (registration is required to download data). Select `Download` --`Data Download after Search for Data Network`. Set `Network` -- `K-NET`; `Peak acceleration` -- `from 1000 to 100000` (i.e., greater than 0.1 g) or `from 500 to 100000` (i.e., greater than 0.05 g). Due to the limitation of the website, please select Recording start time annually.
 
 2. Non-Earthquake: Background noise of the low-cost sensors measured in several environments and various human activities recorded by our low-cost sensors.
   [![](https://img.shields.io/badge/Non--Earthquake-Download-yellow)](https://drive.google.com/file/d/11sivVlx7z-cBwjBWPNY9D2Wmfv-FY-CM/view?usp=sharing)
 
-You can also use your own data, but the data should contain three-component time-series accelerations.
+You can also use your own data, but the data should contain three-component time-series acceleration signals.
 
 ## Models
 

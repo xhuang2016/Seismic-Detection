@@ -8,9 +8,12 @@
 ## Overview
 
 Here we provide the implementation of Artificial Neural Network (ANN) and Convolutional Recurrent Neural Network (CRNN) used in our paper. The repository is organised as follows:
-* ```Processing/``` contains the codes for processing the data.
-* ```Models/``` contains the implementation of the ANN and CRNN models.
-
+* ```requirements.txt```: all required Python libraries to run the codes.
+* ```Codes/Processing.py```: the source code for processing the data.
+* ```Codes/ANN.py```: the implementation of the ANN model.
+* ```Codes/CRNN.py```: the implementation of the CRNN model.
+* ```Codes/ANN_kflod.py```: k-fold cross validation of the ANN.
+* ```Codes/CRNN_kflod.py```: k-fold cross validation of the CRNN.
 
 ## Requirements
 <!---*tensorflow (gpu-1.14)--> 
@@ -62,9 +65,9 @@ You can choose between the following models:
 
 ## Running the code
 1. Download the data as described above.
-2. Run ```Processing/processing.py``` to process the raw data.
-3. Run ```Models/ANN.py``` and ```Models/CRNN.py``` to train and test two models.
-4. ```Models/ANN_kfold.py``` and ```Models/CRNN_kfold.py``` can be used for k-fold cross validation.
+2. Run ```Codes/Processing.py``` to process the raw data.
+3. Run ```Codes/ANN.py``` or ```Codes/CRNN.py``` to train and test each model.
+4. Run ```Models/ANN_kfold.py``` or ```Models/CRNN_kfold.py``` for the k-fold cross validation of each model.
 > Note:
 > 1. To reproduce our results, please download the same set of data as we used in the paper.  
 > 2. For different test cases, please change the setting as described in each code file.

@@ -12,8 +12,8 @@ Here we provide the implementation of Artificial Neural Network (ANN) and Convol
 * ```Code/Processing.py```: the source code for processing the earthquake data.
 * ```Code/ANN.py```: the implementation of ANN.
 * ```Code/CRNN.py```: the implementation of CRNN.
-* ```Code/ANN_kflod.py```: k-fold cross validation of ANN.
-* ```Code/CRNN_kflod.py```: k-fold cross validation of CRNN.
+* ```Code/ANN_kfold.py```: k-fold cross validation of ANN.
+* ```Code/CRNN_kfold.py```: k-fold cross validation of CRNN.
 
 ## Requirements
 <!---numpy==1.16.1--> 

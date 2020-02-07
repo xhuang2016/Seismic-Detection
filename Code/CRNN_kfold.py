@@ -29,7 +29,7 @@ rate = original_SamplingRate/SamplingRate
 
 qry = work_path + '/*.txt'
 files = glob.glob(qry)
-
+n_events = len(files)
 X_EQ=[]
 Y_EQ=[]
 Z_EQ=[]
@@ -66,9 +66,9 @@ X_EQ = np.asarray(X_EQ)
 Y_EQ = np.asarray(Y_EQ)
 Z_EQ = np.asarray(Z_EQ)
 
-X_EQ = X_EQ.reshape(X_EQ.shape[0],X_EQ.shape[1],1)
-Y_EQ = Y_EQ.reshape(Y_EQ.shape[0],Y_EQ.shape[1],1)
-Z_EQ = Z_EQ.reshape(Z_EQ.shape[0],Z_EQ.shape[1],1)
+X_EQ = X_EQ.reshape(n_events, Duration-1, X_EQ.shape[1], 1)
+Y_EQ = Y_EQ.reshape(n_events, Duration-1, Y_EQ.shape[1], 1)
+Z_EQ = Z_EQ.reshape(n_events, Duration-1, Z_EQ.shape[1], 1)
 
 # #=========================== Process Non-Earthquake data ===================================
 ## Location of Non-Earthquake data
@@ -129,6 +129,15 @@ for (train_index, test_index), (train_index2, test_index2) in zip(kf.split(X_EQ)
     Y_HA_train, Y_HA_test = Y_HA[train_index2], Y_HA[test_index2]
     Z_HA_train, Z_HA_test = Z_HA[train_index2], Z_HA[test_index2]
 
+    X_EQ_train = X_EQ_train.reshape(X_EQ_train.shape[0]*X_EQ_train.shape[1], X_EQ_train.shape[2], 1)
+    Y_EQ_train = Y_EQ_train.reshape(Y_EQ_train.shape[0]*Y_EQ_train.shape[1], Y_EQ_train.shape[2], 1)
+    Z_EQ_train = Z_EQ_train.reshape(Z_EQ_train.shape[0]*Z_EQ_train.shape[1], Z_EQ_train.shape[2], 1)
+
+    X_EQ_test = X_EQ_test.reshape(X_EQ_test.shape[0]*X_EQ_test.shape[1], X_EQ_test.shape[2], 1)
+    Y_EQ_test = Y_EQ_test.reshape(Y_EQ_test.shape[0]*Y_EQ_test.shape[1], Y_EQ_test.shape[2], 1)
+    Z_EQ_test = Z_EQ_test.reshape(Z_EQ_test.shape[0]*Z_EQ_test.shape[1], Z_EQ_test.shape[2], 1)
+
+
     # #=========================== CRNN ===================================
     ### CRNN Training
     EQ_X_train = np.dstack((X_EQ_train, Y_EQ_train, Z_EQ_train))
@@ -144,7 +153,7 @@ for (train_index, test_index), (train_index2, test_index2) in zip(kf.split(X_EQ)
     class_weights = {0: 1., 1: ratio}
 
     verbose, epochs, batch_size = 0, 100, 256
-    n_features, n_outputs = X_train.shape[1], X_train.shape[2], y_train.shape[1]
+    n_features, n_outputs = X_train.shape[2], y_train.shape[1]
     n_steps, n_length = 2, SamplingRate
 
     X_train = X_train.reshape((X_train.shape[0], n_steps, n_length, n_features))

@@ -9,11 +9,11 @@ import numpy as np
 import math
 import os
 import glob
-from sklearn.model_selection import KFold
 from sklearn.cluster import KMeans
 from sklearn import preprocessing
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
+from sklearn.externals import joblib
 
 # #=========================== Process EQ data ===================================
 ## Location of EQ data
@@ -173,14 +173,16 @@ ANN_test_y = np.hstack((EQ_test_y, HA_test_y))
 min_max_scaler = preprocessing.MinMaxScaler()
 ANN_train_X = min_max_scaler.fit_transform(ANN_train_X)
 ANN_test_X = min_max_scaler.transform(ANN_test_X)
+joblib.dump(min_max_scaler, write_path + 'ANN_scaler_%s'%SamplingRate + 'Hz_%s'%Duration + 's.pkl')
 
 ## ANN Training
 mlp = MLPClassifier(hidden_layer_sizes=(5,), activation='logistic', solver='sgd', alpha=0, max_iter=10000, random_state=42, learning_rate_init=0.2)
 mlp.fit(ANN_train_X, ANN_train_y.ravel())
+joblib.dump(mlp, write_path + 'ANN_%s'%SamplingRate + 'Hz_%s'%Duration + 's.pkl')
 ## ANN Testing
 y_prob = mlp.predict_proba(ANN_test_X)
 
 ## Save the output prediction probability
 result = np.concatenate((ANN_test_y.reshape(-1, 1), y_prob), axis=1)
 df_result = pd.DataFrame(result, columns=['labels','prob_0','prob_1'])
-df_result.to_csv(write_path + 'ANN_%s'%SamplingRate + 'Hz_%s.csv'%Duration + 's.csv', index=False)
+df_result.to_csv(write_path + 'ANN_%s'%SamplingRate + 'Hz_%s'%Duration + 's.csv', index=False)

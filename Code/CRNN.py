@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import os
 import glob
-from sklearn.model_selection import KFold
+from sklearn.model_selection import train_test_split
 import tensorflow as tf
 
 # #=========================== Process EQ data ===================================
@@ -20,7 +20,7 @@ write_path = 'result/'
 
 ###======Settings for different test cases======###
 SamplingRate = 25 # need to be changed, 25/50/100
-Duration = 2 # need to be changed, 2/4/10
+Duration = 10 # need to be changed, 2/4/10
 ###============###
 
 WindowSize = 2 * SamplingRate
@@ -53,7 +53,7 @@ for fn in files:
     Z_tg = df['Z']
 
     ## 2 sec sliding window with 1 sec overlap
-    for j in np.arange(0, len(X)-SamplingRate, SamplingRate):
+    for j in np.arange(0, len(X_tg)-SamplingRate, SamplingRate):
         X_batch = X_tg[j:j+WindowSize]
         Y_batch = Y_tg[j:j+WindowSize]
         Z_batch = Z_tg[j:j+WindowSize]
@@ -66,9 +66,9 @@ X_EQ = np.asarray(X_EQ)
 Y_EQ = np.asarray(Y_EQ)
 Z_EQ = np.asarray(Z_EQ)
 
-X_EQ = X_EQ.reshape(X_EQ.shape[0],X_EQ.shape[1],1)
-Y_EQ = Y_EQ.reshape(Y_EQ.shape[0],Y_EQ.shape[1],1)
-Z_EQ = Z_EQ.reshape(Z_EQ.shape[0],Z_EQ.shape[1],1)
+X_EQ = X_EQ.reshape(n_events, Duration-1, X_EQ.shape[1], 1)
+Y_EQ = Y_EQ.reshape(n_events, Duration-1, Y_EQ.shape[1], 1)
+Z_EQ = Z_EQ.reshape(n_events, Duration-1, Z_EQ.shape[1], 1)
 
 # #=========================== Process Non-Earthquake data ===================================
 ## Location of Non-Earthquake data
@@ -121,6 +121,15 @@ X_EQ_train, X_EQ_test, train_index, test_index = train_test_split(X_EQ, indices,
 Y_EQ_train, Y_EQ_test = Y_EQ[train_index], Y_EQ[test_index]
 Z_EQ_train, Z_EQ_test = Z_EQ[train_index], Z_EQ[test_index]
 
+X_EQ_train = X_EQ_train.reshape(X_EQ_train.shape[0]*X_EQ_train.shape[1], X_EQ_train.shape[2], 1)
+Y_EQ_train = Y_EQ_train.reshape(Y_EQ_train.shape[0]*Y_EQ_train.shape[1], Y_EQ_train.shape[2], 1)
+Z_EQ_train = Z_EQ_train.reshape(Z_EQ_train.shape[0]*Z_EQ_train.shape[1], Z_EQ_train.shape[2], 1)
+
+X_EQ_test = X_EQ_test.reshape(X_EQ_test.shape[0]*X_EQ_test.shape[1], X_EQ_test.shape[2], 1)
+Y_EQ_test = Y_EQ_test.reshape(Y_EQ_test.shape[0]*Y_EQ_test.shape[1], Y_EQ_test.shape[2], 1)
+Z_EQ_test = Z_EQ_test.reshape(Z_EQ_test.shape[0]*Z_EQ_test.shape[1], Z_EQ_test.shape[2], 1)
+
+
 indices2 = np.arange(len(X_HA))
 X_HA_train, X_HA_test, train_index2, test_index2 = train_test_split(X_HA, indices2, test_size=0.3, random_state=42)
 Y_HA_train, Y_HA_test = Y_HA[train_index2], Y_HA[test_index2]
@@ -140,8 +149,8 @@ y_train = np.hstack((EQ_y_train, HA_y_train)).reshape(-1,1)
 ratio = float(len(HA_y_train)/len(EQ_y_train))
 class_weights = {0: 1., 1: ratio}
 
-verbose, epochs, batch_size = 0, 100, 256
-n_features, n_outputs = X_train.shape[1], X_train.shape[2], y_train.shape[1]
+verbose, epochs, batch_size = 2, 100, 256
+n_features, n_outputs = X_train.shape[2], y_train.shape[1]
 n_steps, n_length = 2, SamplingRate
 
 X_train = X_train.reshape((X_train.shape[0], n_steps, n_length, n_features))
@@ -158,6 +167,7 @@ model.add(tf.keras.layers.Dense(100, activation='relu'))
 model.add(tf.keras.layers.Dense(n_outputs, activation='sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, class_weight=class_weights, verbose=verbose)
+model.save(write_path + 'CRNN_%s'%SamplingRate + 'Hz_%s'%Duration +'s.h5')
 
 ### CRNN Testing
 EQ_X_test = np.dstack((X_EQ_test, Y_EQ_test, Z_EQ_test))
@@ -176,4 +186,4 @@ y_prob = model.predict(X_test).ravel()
 ## Save the ouput prediction probability
 result = np.concatenate((y_test, y_prob.reshape(-1, 1)),axis=1)
 df_result = pd.DataFrame(result, columns=['labels','prob_1'])
-df_result.to_csv(write_path + 'CRNN_%s'%SamplingRate + 'Hz_%s'%Duration +'s.csv'%, index=False)
+df_result.to_csv(write_path + 'CRNN_%s'%SamplingRate + 'Hz_%s'%Duration +'s.csv', index=False)

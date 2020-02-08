@@ -39,7 +39,7 @@ $ pip install -r requirements.txt
 In addition, CUDA 10.0 and cuDNN 7.4 have been used.
 
 
-## Data
+## Dataset
 The dataset contains two classes of three-component time-series acceleration waveforms:
 1. Earthquake: Download from National Research Institute for Earth Science and Disaster Resilience (NIED).
   [![](https://img.shields.io/badge/Earthquake-Download-yellow)](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html)
@@ -53,7 +53,7 @@ The dataset contains two classes of three-component time-series acceleration wav
 2. Non-Earthquake: Background noise of the low-cost sensors measured in several environments and various human activities recorded by our low-cost sensors.
   [![](https://img.shields.io/badge/Non--Earthquake-Download-yellow)](https://drive.google.com/file/d/11sivVlx7z-cBwjBWPNY9D2Wmfv-FY-CM/view?usp=sharing)
 
-You can also use your own data, but the data should contain three-component time-series acceleration signals.
+You can also use your own dataset, but the dataset should contain three-component time-series acceleration signals.
 
 ## Models
 

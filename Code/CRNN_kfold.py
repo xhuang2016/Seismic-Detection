@@ -29,7 +29,6 @@ rate = original_SamplingRate/SamplingRate
 
 qry = work_path + '/*.txt'
 files = glob.glob(qry)
-n_events = len(files)
 X_EQ=[]
 Y_EQ=[]
 Z_EQ=[]
@@ -52,23 +51,25 @@ for fn in files:
     Y_tg = df['Y']
     Z_tg = df['Z']
 
-    ## 2 sec sliding window with 1 sec overlap
-    for j in np.arange(0, len(X)-SamplingRate, SamplingRate):
-        X_batch = X_tg[j:j+WindowSize]
-        Y_batch = Y_tg[j:j+WindowSize]
-        Z_batch = Z_tg[j:j+WindowSize]
-        if len(X_batch) == WindowSize:
-            X_EQ.append(X_batch.values)
-            Y_EQ.append(Y_batch.values)
-            Z_EQ.append(Z_batch.values)
+    if len(X_tg) == SamplingRate*Duration:
+        ## 2 sec sliding window with 1 sec overlap
+        for j in np.arange(0, len(X)-SamplingRate, SamplingRate):
+            X_batch = X_tg[j:j+WindowSize]
+            Y_batch = Y_tg[j:j+WindowSize]
+            Z_batch = Z_tg[j:j+WindowSize]
+            
+            if len(X_batch) == WindowSize:
+                X_EQ.append(X_batch.values)
+                Y_EQ.append(Y_batch.values)
+                Z_EQ.append(Z_batch.values)
 
 X_EQ = np.asarray(X_EQ)
 Y_EQ = np.asarray(Y_EQ)
 Z_EQ = np.asarray(Z_EQ)
 
-X_EQ = X_EQ.reshape(n_events, Duration-1, X_EQ.shape[1], 1)
-Y_EQ = Y_EQ.reshape(n_events, Duration-1, Y_EQ.shape[1], 1)
-Z_EQ = Z_EQ.reshape(n_events, Duration-1, Z_EQ.shape[1], 1)
+X_EQ = X_EQ.reshape(int(len(X_EQ)/(Duration-1)), Duration-1, WindowSize, 1)
+Y_EQ = Y_EQ.reshape(int(len(Y_EQ)/(Duration-1)), Duration-1, WindowSize, 1)
+Z_EQ = Z_EQ.reshape(int(len(Z_EQ)/(Duration-1)), Duration-1, WindowSize, 1)
 
 # #=========================== Process Non-Earthquake data ===================================
 ## Location of Non-Earthquake data

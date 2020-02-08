@@ -53,35 +53,36 @@ for fn in files:
     Y_tg = df['Y']
     Z_tg = df['Z']
 
-    ## Compute vector sum of three-component
-    VS = pow(pow(X_tg, 2) + pow(Y_tg, 2) + pow(Z_tg, 2), 1/2)
+    if len(X_tg) == SamplingRate*Duration:
+        ## Compute vector sum of three-component
+        VS = pow(pow(X_tg, 2) + pow(Y_tg, 2) + pow(Z_tg, 2), 1/2)
 
-    ## 2 sec sliding window with 1 sec overlap
-    for j in np.arange(0, len(X)-SamplingRate, SamplingRate):
-        train = VS[j:j+WindowSize]
-        if len(train) == WindowSize:
-            ## IQR
-            Q75, Q25 = np.percentile(train, [75 ,25])
-            IQR = Q75 - Q25
-            ## ZC
-            ZCx=0
-            ZCy=0
-            ZCz=0
-            ## CAV
-            CAV=0
-            for i in range(j,j+WindowSize-1):
-                if ((X_tg[i]<0) != (X_tg[i+1]<0)):
-                    ZCx += 1
-                if ((Y_tg[i]<0) != (Y_tg[i+1]<0)):
-                    ZCy += 1
-                if ((Z_tg[i]<0) != (Z_tg[i+1]<0)):
-                    ZCz += 1
-                amp = (VS[i] + VS[i+1]) / 2.0
-                CAV += amp/SamplingRate
-            ZC = max(ZCx,ZCy,ZCz)
-            EQ_feature = [IQR, ZC, CAV]
-            EQ_features.append(EQ_feature)
-EQ_features = np.reshape(EQ_features, (n_events, Duration-1, 3))
+        ## 2 sec sliding window with 1 sec overlap
+        for j in np.arange(0, len(X)-SamplingRate, SamplingRate):
+            train = VS[j:j+WindowSize]
+            if len(train) == WindowSize:
+                ## IQR
+                Q75, Q25 = np.percentile(train, [75 ,25])
+                IQR = Q75 - Q25
+                ## ZC
+                ZCx=0
+                ZCy=0
+                ZCz=0
+                ## CAV
+                CAV=0
+                for i in range(j,j+WindowSize-1):
+                    if ((X_tg[i]<0) != (X_tg[i+1]<0)):
+                        ZCx += 1
+                    if ((Y_tg[i]<0) != (Y_tg[i+1]<0)):
+                        ZCy += 1
+                    if ((Z_tg[i]<0) != (Z_tg[i+1]<0)):
+                        ZCz += 1
+                    amp = (VS[i] + VS[i+1]) / 2.0
+                    CAV += amp/SamplingRate
+                ZC = max(ZCx,ZCy,ZCz)
+                EQ_feature = [IQR, ZC, CAV]
+                EQ_features.append(EQ_feature)
+EQ_features = np.reshape(EQ_features, (int(len(EQ_features)/(Duration-1)), Duration-1, 3))
 
 # #=========================== Process HumanActivity data ===================================
 ## Location of Non-Earthquake data

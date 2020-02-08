@@ -14,6 +14,7 @@ Here we provide the implementation of Artificial Neural Network (ANN) and Convol
 * ```Code/CRNN.py```: the implementation of CRNN.
 * ```Code/ANN_kfold.py```: k-fold cross validation for ANN.
 * ```Code/CRNN_kfold.py```: k-fold cross validation for CRNN.
+* ```Code/PerformanceMeasures.py```: Calculate the Performance Measures.
 
 ## Requirements
 <!---numpy==1.16.1--> 

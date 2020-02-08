@@ -8,12 +8,12 @@
 ## Overview
 
 Here we provide the implementation of Artificial Neural Network (ANN) and Convolutional Recurrent Neural Network (CRNN) used in our paper. The repository is organised as follows:
-* ```requirements.txt```: all required Python libraries to run the code.
-* ```Code/Processing.py```: the source code for processing the earthquake data.
-* ```Code/ANN.py```: the implementation of ANN.
-* ```Code/CRNN.py```: the implementation of CRNN.
-* ```Code/ANN_kfold.py```: k-fold cross validation for ANN.
-* ```Code/CRNN_kfold.py```: k-fold cross validation for CRNN.
+* ```requirements.txt```: All required Python libraries to run the code.
+* ```Code/Processing.py```: Source code for processing the earthquake data.
+* ```Code/ANN.py```: Implementation of ANN.
+* ```Code/CRNN.py```: Implementation of CRNN.
+* ```Code/ANN_kfold.py```: K-fold cross validation for ANN.
+* ```Code/CRNN_kfold.py```: K-fold cross validation for CRNN.
 * ```Code/PerformanceMeasures.py```: Calculate the Performance Measures.
 
 ## Requirements
@@ -74,6 +74,7 @@ You can choose between the following models:
 2. Run ```Code/Processing.py``` to process the raw data.
 3. Run ```Code/ANN.py``` or ```Codes/CRNN.py``` to train and test each model.
 4. Run ```Models/ANN_kfold.py``` or ```Models/CRNN_kfold.py``` for the k-fold cross validation for each model.
+5. Run ```Code/PerformanceMeasures.py``` to calculate the performance measures.
 > Note:
 > 1. To reproduce our results, please download the same set of data as we used in the paper.  
 > 2. For different test cases, please change the settings as described in each code file.

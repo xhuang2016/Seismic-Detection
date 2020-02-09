@@ -50,11 +50,11 @@ The dataset contains two classes of three-component time-series acceleration wav
 > 2. 8973 K-NET records of Japan earthquakes from Jan. 1st 1996 to May 31th 2019, each of whose x-axis component PGA is greater than 0.05 g.
 
 > To download the earthquake data for reproducing our results, please: 
->> + (1) Visit [NIED](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html) (registration is required to download data).  
->> + (2) Select `Download` --`Data Download after Search for Data Network`, `Network` -- `K-NET`, `Peak acceleration` -- `from 1000 to 100000` (i.e., greater than 0.1 g) or `from 500 to 100000` (i.e., greater than 0.05 g).   
->> + (3) Set `Recording start time`.
->> + (4) Click `Submit`, then select all records in `Data List`.   
->> + (5) Click `Download All Data`.   
+>> (1) Visit [NIED](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html) (registration is required to download data).  
+>> (2) Select `Download` --`Data Download after Search for Data Network`, `Network` -- `K-NET`, `Peak acceleration` -- `from 1000 to 100000` (i.e., greater than 0.1 g) or `from 500 to 100000` (i.e., greater than 0.05 g).   
+>> (3) Set `Recording start time`.
+>> (4) Click `Submit`, then select all records in `Data List`.   
+>> (5) Click `Download All Data`.   
 >> + Notice that, due to the constraint of the website, only headmost 1200 data will be displayed in `Data List`. Please change the range of `Recording start time`, then repeat above procedures to download all data in batches.
 
 2. Non-Earthquake: Background noise of the low-cost sensors measured in several environments and various human activities recorded by our low-cost sensors.

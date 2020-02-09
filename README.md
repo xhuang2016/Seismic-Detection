@@ -51,11 +51,12 @@ The dataset contains two classes of three-component time-series acceleration wav
 
 > To download the earthquake data for reproducing our results, please: 
 >> + (1) Visit [NIED](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html) (registration is required to download data).  
->> + (2) Select `Download` --`Data Download after Search for Data Network`.  
->> + (3) Set `Network` -- `K-NET`, and `Peak acceleration` -- `from 1000 to 100000` (i.e., greater than 0.1 g) or `from 500 to 100000` (i.e., greater than 0.05 g).  
->> + (4) Set `Recording start time`.  
->> + (5) Click `Submit`, then select all records in `Data List`.  
->> + (6) Click `Download All Data`.  
+>> + (2) Select `Download` -`Data Download after Search for Data Network`.  
+>> + (3) Set `Network` - `K-NET`.  
+>> + (4) Set `Peak acceleration` - `from 1000 to 100000` (i.e., greater than 0.1g) or `from 500 to 100000` (i.e., greater than 0.05g).  
+>> + (5) Set `Recording start time`.  
+>> + (6) Click `Submit`, then select all records in `Data List`.  
+>> + (7) Click `Download All Data`.  
 >> + Notice that, due to the constraint of the website, only headmost 1200 data will be displayed in `Data List`. Please change the range of `Recording start time`, then repeat above procedures to download all data in batches.
 
 2. Non-Earthquake: Background noise of the low-cost sensors measured in several environments and various human activities recorded by our low-cost sensors.

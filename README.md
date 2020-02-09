@@ -53,7 +53,7 @@ The dataset contains two classes of three-component time-series acceleration wav
 >> + (1) Visit [NIED](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html) (registration is required to download data).  
 >> + (2) Select `Download` -`Data Download after Search for Data Network`.  
 >> + (3) Set `Network` - `K-NET`.  
->> + (4) Set `Peak acceleration` - `from 1000 to 100000` (i.e., greater than 0.1g) or `from 500 to 100000` (i.e., greater than 0.05g).  
+>> + (4) Set `Peak acceleration` - `from 1000 to 100000` (i.e., > 0.1g) or `from 500 to 100000` (i.e., > 0.05g).  
 >> + (5) Set `Recording start time`.  
 >> + (6) Click `Submit`, then select all records in `Data List`.  
 >> + (7) Click `Download All Data`.  

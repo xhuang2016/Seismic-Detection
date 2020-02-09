@@ -52,7 +52,7 @@ The dataset contains two classes of three-component time-series acceleration wav
 > To download the earthquake data for reproducing our results, please: 
 >> + (1) Visit [NIED](http://www.kyoshin.bosai.go.jp/kyoshin/data/index_en.html) (registration is required to download data).  
 >> + (2) Select `Download` --`Data Download after Search for Data Network`.  
->> + (3) Set `Network` -- `K-NET`, `Peak acceleration` -- `from 1000 to 100000` (i.e., greater than 0.1 g) or `from 500 to 100000` (i.e., greater than 0.05 g).  
+>> + (3) Set `Network` -- `K-NET`, and `Peak acceleration` -- `from 1000 to 100000` (i.e., greater than 0.1 g) or `from 500 to 100000` (i.e., greater than 0.05 g).  
 >> + (4) Set `Recording start time`.  
 >> + (5) Click `Submit`, then select all records in `Data List`.  
 >> + (6) Click `Download All Data`.  

@@ -7,7 +7,7 @@
 
 ## Overview
 
-Here we provide the implementation of Artificial Neural Network (ANN) and Convolutional Recurrent Neural Network (CRNN) used in our paper. The repository is organised as follows:
+Here we provide the implementation of Artificial Neural Network (ANN) and Convolutional Recurrent Neural Network (CRNN) used in our paper. ![](https://img.shields.io/badge/Source-Download-yellow) The repository is organised as follows:
 * ```requirements.txt```: All required Python libraries to run the code.
 * ```Code/Processing.py```: Source code for processing the earthquake data.
 * ```Code/ANN.py```: Implementation of ANN.
@@ -15,7 +15,8 @@ Here we provide the implementation of Artificial Neural Network (ANN) and Convol
 * ```Code/ANN_kfold.py```: K-fold cross validation for ANN.
 * ```Code/CRNN_kfold.py```: K-fold cross validation for CRNN.
 * ```Code/PerformanceMeasures.py```: Calculate the Performance Measures.
-https://img.shields.io/badge/Source-Download-yellow
+
+
 ## Requirements
 <!---numpy==1.16.1--> 
 <!---pandas=0.24.1--> 

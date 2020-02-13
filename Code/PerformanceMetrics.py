@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
 ====================================
-Calculate the Performance Measures
+Calculate the Performance Metrics
 ====================================
 """
 import pandas as pd
@@ -39,12 +39,12 @@ precision, recall, thresholds2 = precision_recall_curve(y_test, y_prob)
 pr_auc = auc(recall, precision)
 
 
-## Print Performance Measures
+## Print Performance Metrics
 ## AUROC
 print('AUROC:', roc_auc)
 ## AUPR
 print('AUPRC:', pr_auc)
-## Performance Measures with a Probability Threshold of 0.5
+## Performance Metrics with a Probability Threshold of 0.5
 print('Threshold 0.5:')
 ## Confusion Matrix
 print(confusionmatrix)

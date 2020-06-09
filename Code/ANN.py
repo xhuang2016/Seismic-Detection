@@ -23,8 +23,8 @@ work_path = 'EQ'
 write_path = 'result/'
 
 ###======Settings for different test cases======###
-SamplingRate = 25 # need to be changed, 25/50/100
-Duration = 2 # need to be changed, 2/4/10
+SamplingRate = 100 # need to be changed, 25/50/100
+Duration = 10 # need to be changed, 2/4/10
 ###=============================================###
 
 WindowSize = 2 * SamplingRate
@@ -150,14 +150,22 @@ EQ_train_y = np.ones(len(EQ_train))
 
 HA_train = np.reshape(HA_train, (len(HA_train), 3))
 
-## k-means clustering to balance the dataset
-kmeans = KMeans(n_clusters=len(EQ_train), random_state=42).fit(HA_train)
+if len(EQ_train) < len(HA_train):
+    ## k-means clustering to balance the dataset
+    ## k-means clustering only runs when # of EQ instances < # of Human Activity instances
+    kmeans = KMeans(n_clusters=len(EQ_train), random_state=42).fit(HA_train)
 
-HA_train_centroid = kmeans.cluster_centers_
-HA_train_y = np.zeros(len(HA_train_centroid))
+    HA_train_centroid = kmeans.cluster_centers_
+    HA_train_y = np.zeros(len(HA_train_centroid))
 
-ANN_train_X = np.vstack((EQ_train, HA_train_centroid))
-ANN_train_y = np.hstack((EQ_train_y, HA_train_y))
+    ANN_train_X = np.vstack((EQ_train, HA_train_centroid))
+    ANN_train_y = np.hstack((EQ_train_y, HA_train_y))
+else:
+    HA_train_y = np.zeros(len(HA_train))
+
+    ANN_train_X = np.vstack((EQ_train, HA_train))
+    ANN_train_y = np.hstack((EQ_train_y, HA_train_y))
+
 
 EQ_test = np.reshape(EQ_test, (len(EQ_test)*(Duration-1), 3))
 EQ_test_y = np.ones(len(EQ_test))

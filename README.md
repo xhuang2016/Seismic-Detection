@@ -7,7 +7,7 @@
 
 ## Overview
 
-Here we provide the implementation of Artificial Neural Network (ANN) and Convolutional Recurrent Neural Network (CRNN) used in our paper that appears in ACM KDD 2020. [![](https://img.shields.io/badge/Source-Download-yellow)](https://drive.google.com/file/d/1QA0Ua8mF9_aW_9v_xpgmmzTA0gWF5oZL/view?usp=sharing)  
+Here we provide the implementation of Artificial Neural Network (ANN) and Convolutional Recurrent Neural Network (CRNN) used in our paper in ACM KDD 2020. [![](https://img.shields.io/badge/Source-Download-yellow)](https://drive.google.com/file/d/1QA0Ua8mF9_aW_9v_xpgmmzTA0gWF5oZL/view?usp=sharing)  
 The repository is organised as follows:
 * ```requirements.txt```: All required Python libraries to run the code.
 * ```Code/Processing.py```: Source code for processing the earthquake data.
